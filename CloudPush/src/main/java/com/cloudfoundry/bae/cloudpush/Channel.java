@@ -713,7 +713,7 @@ public class Channel extends BaeBase {
 //            encodedGather = new URLCodec("utf8").encode(gather);
             encodedGather = URLEncoder.encode(gather, "utf8");
         } catch (UnsupportedEncodingException ex) {
-            throw new ChannelException("wront params are seted: " + gather, CHANNEL_SDK_PARAM);
+            throw new ChannelException("wrong params are seted: " + gather, CHANNEL_SDK_PARAM);
         }
         String sign = DigestUtils.md5Hex(encodedGather);
         
